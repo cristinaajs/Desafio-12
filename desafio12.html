@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stilo.css">
+    <title>Chamada</title>
+</head>
+<body>
+    <button onclick="exibirNome()"> Selecionar Nome </button>
+    <p id = "selecionado" ></p>
+
+    <script>
+        function pessoas () {
+            const chamada = [ "Misty", "Zara", "Scott", "Gaia", "Kira", "Isaac", "Zula", "Lisa", "Suki", "Serena" ];
+            const chamadaAleatoria = chamada[Math.floor(Math.random() * chamada.length)];
+            return chamadaAleatoria;
+        }
+
+        function exibirNome(){
+            const selecao = pessoas();
+            document.getElementById('selecionado').innerText = `O selecionado é: ${selecao}`;
+        }
+
+    </script>
+</body>
+</html>
